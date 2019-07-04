@@ -45,4 +45,11 @@ function submitComment() {
     textArea.value = null;
  
 }
+// const content = document.getElementById('content');
+// const h1 = document.createElement('h1');
+// const img = document.createElement('img');
+// content.classList.add('content');
+// content.appendChild(h1);
+// content.appendChild(img);
+
 

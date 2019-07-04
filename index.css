@@ -30,3 +30,27 @@ h1 {
     justify-content: center;
     align-items: flex-start;
 }
+form {
+    margin: 2rem auto;
+    width: 50%;
+    min-width: 15rem;
+    padding: 1rem;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+.formSection {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+label {
+    display: inline-block;
+    width: 80%;
+}
+
+input, textarea {
+    width: 80%;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    min-height: 2rem;
+    font-size: 1.2rem;
+}

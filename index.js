@@ -1,12 +1,15 @@
 function displayPainting(painting){
     const gallery = document.getElementById('gallery');
-    const link="./pages/detail-page.html";
-    const img = document.createElement('img');      
+    const href="./pages/detail-page.html";
+    const img = document.createElement('img');
+    const a = document.createElement('a');      
     img.src=painting.webImage.url;
     img.alt=painting.title;
     img.class=painting.class;
-    img.link=link;
-    gallery.appendChild(img);        
+    a.href=href;
+    gallery.appendChild(a);  
+    a.appendChild(img);
+          
   }
   function paintingValidation(painting){
       if(painting.width < 500){
@@ -17,6 +20,7 @@ function displayPainting(painting){
       }
       return true;
   }
+
 
 const data = {
     elapsedMilliseconds: 0,
@@ -347,11 +351,26 @@ const data = {
   const paintings = data.artObjects;
 
   for (let i=0; i<paintings.length; i++){
+         const currentPainting = paintings[i];
+        if(paintingValidation(currentPainting)) {
+            displayPainting(currentPainting);
+     }
+ }
       
-      const currentPainting = paintings[i];
-      if(paintingValidation(currentPainting)) displayPainting(currentPainting);
-      
+function searchPainter(){
+    document.getElementById('gallery').innerHTML=null;
+    const painter = document.getElementById('painter');
+    let painterName = painter.value;
+    for(let i=0; i<paintings.length; i++){
+        const currentPainting = paintings[i];
+        if(currentPainting.principalOrFirstMaker.includes(painterName)){
+                displayPainting(currentPainting);
+        }  
 
-        
+    }
+    painterName=null;    
+
   }
+  
+
  
