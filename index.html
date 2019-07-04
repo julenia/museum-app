@@ -18,10 +18,17 @@
                     <label for="painter">Give the painter name:</label>
                     <input type="text" id="painter">
                 </div>
-                <!-- <div class="formSection">
-                    <label for="msg">Message:</label>
-                    <textarea id="msg"></textarea>
-                </div> -->
+                <div class="button">
+                        <button type="default">Search</button>
+                    </div>
+                </form>
+                <form onsubmit="searchTimeFrame(); return false">
+                <div class="formSection">
+                    <label for="yearMin">Beginning year:</label>
+                    <textarea id="yearMin"></textarea>
+                    <label for="yearMax">End year:</label>
+                    <textarea id="yearMax"></textarea>
+                </div>
                 <div class="button">
                     <button type="default">Search</button>
                 </div>

@@ -371,6 +371,26 @@ function searchPainter(){
     painterName=null;    
 
   }
+
+  function searchTimeFrame(){
+      document.getElementById('gallery').innerHTML=null;
+      const year1=document.getElementById('yearMin');
+      const year2=document.getElementById('yearMax');
+      let yearMin=year1.value;
+      let yearMax=year2.value;
+      if(yearMin==null) yearMin=-2000;
+      if(yearMax==null) yearMax=4000;
+      for(let i =0; i<paintings.length; i++){
+          const currentPainting = paintings[i];
+          const year=currentPainting.longTitle.substr(currentPainting.longTitle.length-4);
+          if(year>=yearMin && year<=yearMax){
+              displayPainting(currentPainting);
+          }
+      }
+      yearMin=null;
+      yearMax=null;
+
+  }
   
 
  
