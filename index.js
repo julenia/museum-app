@@ -8,6 +8,15 @@ function displayPainting(painting){
     img.link=link;
     gallery.appendChild(img);        
   }
+  function paintingValidation(painting){
+      if(painting.width < 500){
+          return false;
+      }
+      if(painting.principalOrFirstMaker.includes('Honthorst') ){
+          return false;
+      }
+      return true;
+  }
 
 const data = {
     elapsedMilliseconds: 0,
@@ -340,7 +349,10 @@ const data = {
   for (let i=0; i<paintings.length; i++){
       
       const currentPainting = paintings[i];
-      displayPainting(currentPainting);
+      if(paintingValidation(currentPainting)) displayPainting(currentPainting);
+      
+
         
   }
+ 
  
