@@ -4,7 +4,6 @@
         <title>Museum Guide</title>
         <link rel="stylesheet" type="text/css" media="screen" href="index.css">
         <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-        
     </head>
     <body>
         <main>
@@ -12,12 +11,33 @@
             <section id="gallery">
                 <h2>Gallery</h2>
                 
+               
             </section>
+            <form onsubmit="searchPainter(); return false">
+                <div class="formSection">
+                    <label for="painter">Give the painter name:</label>
+                    <input type="text" id="painter">
+                </div>
+                <div class="button">
+                        <button type="default">Search</button>
+                    </div>
+                </form>
+                <form onsubmit="searchTimeFrame(); return false">
+                <div class="formSection">
+                    <label for="yearMin">Beginning year:</label>
+                    <textarea id="yearMin"></textarea>
+                    <label for="yearMax">End year:</label>
+                    <textarea id="yearMax"></textarea>
+                </div>
+                <div class="button">
+                    <button type="default">Search</button>
+                </div>
+            </form> 
         </main>
         <footer>
                 <p>Made with ❤ at Codaisseur</p>
         </footer>
-        <script src="index.js"></script>
+        <script src=index.js></script> </script>
 
     </body>
 </html>
